@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/common_padding_min"
+        tools:context=".calculator.CalculadorActivity">
+
+        <LinearLayout
+            android:id="@+id/llBottom"
+            style="@style/MyLinearLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/btnPoint"
+                style="@style/ButtonSecondary"
+                android:text="@string/calc_btn_point" />
+
+            <Button
+                android:id="@+id/btnZero"
+                style="@style/ButtonNumeric"
+                android:text="@string/calc_btn_zero" />
+
+            <Button
+                android:id="@+id/btnResolve"
+                style="@style/ButtonSecondary"
+                android:layout_marginStart="@dimen/common_padding_default"
+                android:layout_weight="50"
+                android:text="@string/calc_btn_resolve"
+                tools:ignore="InefficientWeight" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPreBottom"
+            style="@style/MyLinearLayout"
+            app:layout_constraintBottom_toTopOf="@id/llBottom"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/btnOne"
+                style="@style/ButtonNumeric"
+                android:text="@string/calc_btn_one" />
+
+            <Button
+                android:id="@+id/btnTwo"
+                style="@style/ButtonNumeric"
+                android:text="@string/calc_btn_two" />
+
+            <Button
+                android:id="@+id/btnThree"
+                style="@style/ButtonNumeric"
+                android:text="@string/calc_btn_three" />
+
+            <Button
+                android:id="@+id/btnSum"
+                style="@style/ButtonOperator"
+                android:text="@string/calc_btn_sum" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMiddle"
+            style="@style/MyLinearLayout"
+            app:layout_constraintBottom_toTopOf="@id/llPreBottom"
+            tools:ignore="MissingConstraints">
+
+
+            <Button
+                android:id="@+id/btnFour"
+                style="@style/ButtonNumeric"
+                android:text="@string/calc_btn_four" />
+
+            <Button
+                android:id="@+id/btnFive"
+                style="@style/ButtonNumeric"
+                android:text="@string/calc_btn_five" />
+
+            <Button
+                android:id="@+id/btnSix"
+                style="@style/ButtonNumeric"
+                android:text="@string/calc_btn_six" />
+
+            <Button
+                android:id="@+id/btnSub"
+                style="@style/ButtonOperator"
+                android:text="@string/calc_btn_sub" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPreTop"
+            style="@style/MyLinearLayout"
+            app:layout_constraintBottom_toTopOf="@id/llMiddle"
+            tools:ignore="MissingConstraints">
+
+
+            <Button
+                android:id="@+id/btnSeven"
+                style="@style/ButtonNumeric"
+                android:text="@string/calc_btn_seven" />
+
+            <Button
+                android:id="@+id/btnEight"
+                style="@style/ButtonNumeric"
+                android:text="@string/calc_btn_eight" />
+
+            <Button
+                android:id="@+id/btnNine"
+                style="@style/ButtonNumeric"
+                android:text="@string/calc_btn_nine" />
+
+            <Button
+                android:id="@+id/btnMulti"
+                style="@style/ButtonOperator"
+                android:text="@string/calc_btn_multi"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTop"
+            style="@style/MyLinearLayout"
+            app:layout_constraintBottom_toTopOf="@id/llPreTop"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/btnClear"
+                style="@style/ButtonWarning"
+                android:layout_marginEnd="@dimen/common_padding_min"
+                android:layout_weight="50"
+                android:text="@string/calc_btn_clear"
+                tools:ignore="InefficientWeight" />
+
+            <Button
+                android:id="@+id/btnDiv"
+                style="@style/ButtonOperator"
+                android:text="@string/calc_btn_div" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDelete"
+                style="@style/ButtonSecondary"
+                app:icon="@drawable/ic_backspace"
+                app:iconGravity="textStart"
+                app:iconPadding="@dimen/common_padding_none" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvResult"
+            style="@style/MyTextView"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/common_padding_min"
+            android:gravity="center_vertical|end"
+            android:textAppearance="?attr/textAppearanceHeadline3"
+            app:layout_constraintBottom_toTopOf="@id/llTop"
+            app:layout_constraintTop_toBottomOf="@id/tvOperation"
+            tools:ignore="MissingConstraints"
+            tools:text="10.0" />
+
+        <TextView
+            android:id="@+id/tvOperation"
+            style="@style/MyTextView"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:text="5x2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

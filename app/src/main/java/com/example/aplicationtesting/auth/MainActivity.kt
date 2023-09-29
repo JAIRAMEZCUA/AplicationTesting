@@ -1,4 +1,4 @@
-package com.example.aplicationtesting
+package com.example.aplicationtesting.auth
 
 import android.content.Context
 import android.os.Bundle
@@ -7,7 +7,6 @@ import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.transition.TransitionManager
 import com.example.aplicationtesting.databinding.ActivityMainBinding
-import com.example.aplicationtesting.auth.userAuthentication
 import com.google.android.material.transition.MaterialFadeThrough
 
 class MainActivity : AppCompatActivity() {

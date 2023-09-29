@@ -37,11 +37,11 @@ android {
     dataBinding {
         enable = true
     }
-   /*
-    viewBinding {
-        enable = true
-    }
-    */
+    /*
+     viewBinding {
+         enable = true
+     }
+     */
 }
 
 dependencies {
@@ -55,6 +55,9 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     //Hamcrest
-    testImplementation ("org.hamcrest:hamcrest:2.2")
+    testImplementation("org.hamcrest:hamcrest:2.2")
+
+    //Mockito
+    testImplementation("org.mockito:mockito-core:4.1.0")
 
 }

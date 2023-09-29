@@ -1,5 +1,7 @@
-package com.example.aplicationtesting
+package com.example.aplicationtesting.junit
 
+import com.example.aplicationtesting.junit.Assertions
+import com.example.aplicationtesting.junit.User
 import org.junit.*
 import org.junit.Assert.*
 

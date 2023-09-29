@@ -1,4 +1,4 @@
-package com.example.aplicationtesting
+package com.example.aplicationtesting.junit
 
 /****
  * Project: Fundamentos JUnit

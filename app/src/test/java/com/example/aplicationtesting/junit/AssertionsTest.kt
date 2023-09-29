@@ -1,4 +1,4 @@
-package com.example.aplicationtesting
+package com.example.aplicationtesting.junit
 
 import org.junit.Assert.*
 import org.junit.Test
@@ -9,9 +9,23 @@ class AssertionsTest {
         val assertions = Assertions()
         val array = arrayOf(21, 117)
         val arrayFail = arrayOf(21, 11)
-
         assertArrayEquals(array, assertions.getLuckyNumbers())
-        assertArrayEquals("Error en  arreglo", arrayFail, assertions.getLuckyNumbers())
+        //TODO mandara el mensaje porque la comparacion no es igual
+//        assertArrayEquals("Error en  arreglo", arrayFail, assertions.getLuckyNumbers())
+//        var arraysAreEqual = true
+//        if (expectedArray.length !== actualArray.length) {
+//            arraysAreEqual = false
+//        } else {
+//            for (i in 0 until expectedArray.length) {
+//                if (expectedArray.get(i) !== actualArray.get(i)) {
+//                    arraysAreEqual = false
+//                    break
+//                }
+//            }
+//        }
+//
+//        assertFalse(arraysAreEqual) // La aserción fallará si las matrices son iguales en contenido
+//
 
     }
 

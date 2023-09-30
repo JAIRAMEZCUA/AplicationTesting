@@ -12,10 +12,12 @@ package com.example.aplicationtesting.calculator
  ***/
 class CalculatorUtils(private val operations: Operations, private val listener: OnResolveListener) {
     fun checkOrResolve(operation: String, isFromResolve: Boolean) {
-        Operations.tryResolve(operation, isFromResolve, listener)
+        operations.tryResolve(operation, isFromResolve, listener)
+        operations.print();
     }
 
     fun addOperator(operator: String, operation: String, callback: () -> Unit) {
+        //Tomamos el ultimo elemento de operation
         val lastElement = if (operation.isEmpty()) ""
         else operation.substring(operation.length - 1)
 
@@ -34,8 +36,8 @@ class CalculatorUtils(private val operations: Operations, private val listener: 
         if (!operation.contains(Constants.POINT)) {
             callback()
         } else {
-            val operator = Operations.getOperator(operation)
-            val values = Operations.divideOperation(operator, operation)
+            val operator = operations.getOperator(operation)
+            val values = operations.divideOperation(operator, operation)
 
             if (values.isNotEmpty()) {
                 val numberOne = values[0]!!

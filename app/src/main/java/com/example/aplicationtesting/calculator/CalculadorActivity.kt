@@ -58,6 +58,7 @@ class CalculadorActivity : AppCompatActivity(), OnResolveListener {
                 calculatorUtils.checkOrResolve(operation, false)
 
                 calculatorUtils.addOperator(valueStr, operation) {
+                    //TODO CUANDO SE TERMINE DE HACER TODO LO DE addOperator se hara esto
                     binding.tvOperation.append(valueStr)
                 }
             }

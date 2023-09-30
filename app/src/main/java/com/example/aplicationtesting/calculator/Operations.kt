@@ -13,6 +13,8 @@ import com.example.aplicationtesting.R
  * Web: www.alainnicolastello.com
  ***/
 object Operations {
+
+    //  TODO Operations ES UN OBJETO , Y POR LO TANTO ES FINAL Y POR TAL MOTIVO NECESITAMOS AGREGAR MOCKITOINLINE
     fun getOperator(operation: String): String {
         var operator = when {
             operation.contains(Constants.OPERATOR_MULTI) -> Constants.OPERATOR_MULTI
@@ -96,5 +98,9 @@ object Operations {
             Constants.OPERATOR_SUM -> numberOne + numberTwo
             else -> numberOne - numberTwo //Constants.OPERATOR_SUB
         }
+    }
+
+    fun print() {
+        println("HOLA")
     }
 }

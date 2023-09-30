@@ -58,6 +58,7 @@ dependencies {
     testImplementation("org.hamcrest:hamcrest:2.2")
 
     //Mockito
-    testImplementation("org.mockito:mockito-core:4.1.0")
+    testImplementation("org.mockito:mockito-core:5.3.1")
+    testImplementation("org.mockito:mockito-inline:5.2.0")
 
 }
